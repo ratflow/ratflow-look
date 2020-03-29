@@ -1,0 +1,6 @@
+ 
+project=ratflow-look
+pkgVersion=1.0.0
+pkgSource=ratflow
+maintainer=ratflow
+license=GPL
