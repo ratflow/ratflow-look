@@ -22,7 +22,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 set -e          # exit on command errors (so you MUST handle exit codes properly!)
 set -o pipefail # capture fail exit codes in piped commands
-#set -x         # execution tracing debug messages
+set -x         # execution tracing debug messages
 
 #===========================================
 
@@ -106,7 +106,7 @@ function initializeCache {
     pushd "$cacheDir"
     echo "#!/bin/bash
 
-cp -r \"$rootSrcDir/\"* /
+cp -r \"$rootSrcDir/\"* / ||:
 
     " >> install.sh
     chmod +x install.sh
